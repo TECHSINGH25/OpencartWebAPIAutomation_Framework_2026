@@ -15,6 +15,9 @@ export class BasePage {
 
     constructor(page: Page) {
         this.page = page;
+        console.log('Hi...........');
+
+
         this.logo = page.getByRole('img', { name: 'naveenopencart' });
         this.searchBox = page.getByRole('textbox', { name: 'Search' });
         this.searchIcon = page.locator('div#search button');
