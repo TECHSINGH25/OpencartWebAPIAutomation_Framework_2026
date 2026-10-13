@@ -12,11 +12,17 @@ node_modules/
 
 # env files (confidentials) :
 config/.env.*
+!config/.env.example*
 
 #build
 dist/
 
-#OS files
+#  OS files
 .DS_Store
+
+# IDE
+.vscode/
+.idea/
+
 
 reporting-labs.history.json
