@@ -15,13 +15,13 @@ test.beforeEach(async ({ loginPage }) => {
 //     await page.pause();
 // })
 
-test('verify product header', async ({ homePage, searchResultsPage, productInfoPage }) => {
+test('@smoke verify product header', async ({ homePage, searchResultsPage, productInfoPage }) => {
     await homePage.doSearch('macbook');
     await searchResultsPage.selectProduct('MacBook Pro');
     expect(await productInfoPage.getProductHeader()).toBe('MacBook Pro');
 })
 
-test('verify product images count', async ({ homePage, searchResultsPage, productInfoPage }) => {
+test('@regression verify product images count', async ({ homePage, searchResultsPage, productInfoPage }) => {
     await homePage.doSearch('macbook');
     // await searchResultsPage.selectProduct('Samsung Galaxy Tab 10.1');
     await searchResultsPage.selectProduct('Macbook Pro');
@@ -29,7 +29,7 @@ test('verify product images count', async ({ homePage, searchResultsPage, produc
 });
 
 
-test('verify product information/data', async ({ homePage, searchResultsPage, productInfoPage }) => {
+test('@regression verify product information/data', async ({ homePage, searchResultsPage, productInfoPage }) => {
     await homePage.doSearch('macbook');
     await searchResultsPage.selectProduct('MacBook Pro');
 
@@ -51,20 +51,20 @@ test('verify product information/data', async ({ homePage, searchResultsPage, pr
 });
 
 //common features test:
-test('App logo exists on Login Page', async ({ basePage }) => {
+test('@smoke App logo exists on Login Page', async ({ basePage }) => {
     expect(await basePage.isLogoVisible()).toBeTruthy();
 });
 
-test('Search Box exists on Login Page', async ({ basePage }) => {
+test('@smoke Search Box exists on Login Page', async ({ basePage }) => {
     expect(await basePage.isSearchBoxVisible()).toBeTruthy();
 });
 
 
-test('Cart exists on Login Page', async ({ basePage }) => {
+test('@smoke Cart exists on Login Page', async ({ basePage }) => {
     expect(await basePage.isCartButtonVisible()).toBeTruthy();
 });
 
 
-test('Footers exists on Login Page', async ({ basePage }) => {
+test('@smoke Footers exists on Login Page', async ({ basePage }) => {
     expect(await basePage.getPageFootersCount()).toBe(16);
 });
