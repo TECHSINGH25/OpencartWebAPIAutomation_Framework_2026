@@ -6,7 +6,7 @@ import { test, expect } from '../src/fixtures/pagefixtures';
 test.beforeEach(async ({ loginPage }) => {
     await loginPage.goToLoginPage();
     // await loginPage.doLogin('pwapril@pw.com', 'pw123');
-    await loginPage.doLogin(process.env.USERNAME, process.env.PASSWORD);
+    await loginPage.doLogin(process.env.APP_USERNAME!, process.env.APP_PASSWORD!);
 });
 
 
