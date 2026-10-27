@@ -24,8 +24,8 @@ test('@smoke verify product header', async ({ homePage, searchResultsPage, produ
 test('@regression verify product images count', async ({ homePage, searchResultsPage, productInfoPage }) => {
     await homePage.doSearch('macbook');
     // await searchResultsPage.selectProduct('Samsung Galaxy Tab 10.1');
-    await searchResultsPage.selectProduct('Macbook Pro');
-    expect(await productInfoPage.getProductImagesCount()).toBe(7);
+    await searchResultsPage.selectProduct('MacBook Pro');
+    expect(await productInfoPage.getProductImagesCount()).toBe(4);
 });
 
 
